@@ -28,3 +28,24 @@ function App() {
 }
 
 export default App;
+
+
+// import './App.css';
+// import Nav from './components/Nav'
+// import UserCard from './components/UserCards'
+// import AddFoodie from './components/AddFoodie'
+
+// function App() {
+//   return (
+//     <div className="App">
+//       <Nav />
+//       <br />
+//       <UserCard />
+//       <br />
+//       <br />
+//       <AddFoodie />
+//     </div>
+//   );
+// }
+
+// export default App;
