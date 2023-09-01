@@ -2,6 +2,10 @@
   background-color: #EFE5DC;
 }
 
+.home {
+  color: rgb(251, 254, 251);
+}
+
 .userCards {
   display: flex;
   justify-content: space-evenly;
