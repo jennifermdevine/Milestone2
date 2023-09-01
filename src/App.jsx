@@ -1,5 +1,8 @@
 import {BrowserRouter as Router, Link, Route,Routes} from 'react-router-dom'
-import In from './components/In'
+import In from './components/In';
+
+import Nav from './components/Nav';
+import AddFoodie from './components/AddFoodie';
 import './App.css';
 
 function App() {
@@ -7,19 +10,14 @@ function App() {
     <div className="App">
       <Router>
         <header>
-          <ul>
-            <li>
-              <Link to='/'>Home</Link>
-            </li>
-            <li>
-              <Link to='/recipes'>In</Link>
-            </li>
-          </ul>
+          <Nav />
+            <Link to='/recipes'>In</Link>
         </header>
         <main>
           <Routes>
             <Route path='/'></Route>
             <Route path='/recipes' element={<In/>}></Route>
+            {/* <Route path='/restaurants' element={<Out />}</Route> */}
           </Routes >
         </main>
       </Router>
@@ -28,3 +26,4 @@ function App() {
 }
 
 export default App;
+
