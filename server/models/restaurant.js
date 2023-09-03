@@ -14,28 +14,28 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Restaurant.init({
-    Restaurant_id:{
-      type: DataTypes.SMALLINT,
+    restaurant_id: {
+      type:DataTypes.INTEGER,
       primaryKey:true,
       autoIncrement:true
-    } ,
-    name:{
-      type: DataTypes.STRING,
-      allowNull:false
-    } ,
+        } ,
+    name: {
+      type:DataTypes.STRING,
+      allowNull: false
+    },
     protein:{
-      type: DataTypes.STRING,
-      allowNull:false
-    } ,
-    year_founded:{
-      type:DataTypes.SMALLINT,
-      allowNull:false
+      type:DataTypes.STRING,
+      allowNull: false
+    },
+    year_founded: {
+      type:DataTypes.INTEGER,
+      allowNull: false
     }
   }, {
     sequelize,
     modelName: 'Restaurant',
     tableName: 'restaurants',
-    timeStamps:false
+    timestamps: false
   });
   return Restaurant;
 };
