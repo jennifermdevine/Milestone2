@@ -1,5 +1,5 @@
 import {useState,useEffect} from 'react'
-
+import Button from 'react-bootstrap/Button';
 
 export default function In() {
     const [recipes, setRecipes] = useState([])
@@ -24,6 +24,9 @@ export default function In() {
                     </li>
                 ))}
              </ul>
+             <Button variant="danger" type="submit">
+                Add Recipe
+            </Button>
         </div>
        
     )

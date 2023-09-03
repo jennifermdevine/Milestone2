@@ -1,5 +1,5 @@
 import {useState,useEffect} from 'react'
-
+import Button from 'react-bootstrap/Button';
 
 export default function Out() {
     const [restaurants, setRestaurants] = useState([])
@@ -24,6 +24,9 @@ export default function Out() {
                     </li>
                 ))}
             </ul>
+            <Button variant="danger" type="submit">
+                Add Restaurant
+            </Button>
         </div>
 
     )
