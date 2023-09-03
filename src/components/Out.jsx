@@ -23,7 +23,7 @@ export default function Out() {
                         <div>Protein: {restaurant.protein}</div>
                     </li>
                 ))}
-             </ul>
+            </ul>
         </div>
 
     )

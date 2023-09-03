@@ -17,8 +17,6 @@ function App() {
             <ul className="linkList">
             <li><Link className="a" to="/home">Home </Link></li>
             
-            <li><Link className="a" to="/addFoodie">Add Foodie</Link></li>
-            
             <li><Link className="a" to='/recipes'>In</Link></li>
             
             <li><Link className="a" to="/restaurants">Out</Link></li>
