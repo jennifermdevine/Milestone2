@@ -14,13 +14,15 @@ function App() {
         <header>
           <Nav />
           <br />
-            <Link className="a" to="/home">Home </Link>
-            <br />
-            <Link className="a" to="/addFoodie">Add Foodie</Link>
-            <br />
-            <Link className="a" to='/recipes'>In</Link>
-            <br />
-            <Link className="a" to="/out">Out</Link>
+            <ul className="linkList">
+            <li><Link className="a" to="/home">Home </Link></li>
+            
+            <li><Link className="a" to="/addFoodie">Add Foodie</Link></li>
+            
+            <li><Link className="a" to='/recipes'>In</Link></li>
+            
+            <li><Link className="a" to="/restaurants">Out</Link></li>
+            </ul>
         </header>
 
         <main>
@@ -29,7 +31,7 @@ function App() {
             <Route path='/home' element={<Home/>}></Route>
             <Route path='/recipes' element={<In/>}></Route>
             <Route path="/addFoodie" element={<AddFoodie />}></Route>
-            <Route path="/out" element={<Out/>}></Route>
+            <Route path="/restaurants" element={<Out/>}></Route>
             {/* <Route path='/restaurants' element={<Out />}</Route> */}
           </Routes >
         </main>

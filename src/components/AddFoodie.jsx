@@ -13,7 +13,7 @@ function AddFoodie() {
                     <Form.Control placeholder="Your Name"/>
                 </Form.Group>
             </Row>
-            <Form.Select aria-label="Default select example">
+            <Form.Select aria-label="Default select example" className="dropdown">
                 <option>What protein are you craving?</option>
                 <option value="1">Beef</option>
                 <option value="2">Chicken</option>
