@@ -2,26 +2,25 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Restaurants', {
-
-      Restaurant_id: {
-        allowNull: false,
+    await queryInterface.createTable('restaurants', {
+      
+      restaurant_id: {
+        type: Sequelize.INTEGER,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER,
-        allowNull:false
+        allowNull: false
       },
       name: {
         type: Sequelize.STRING,
-        allowNull:false
+        allowNull: false
       },
       protein: {
         type: Sequelize.STRING,
-        allowNull:false
+        allowNull: false
       },
       year_founded: {
-        type: Sequelize.SMALLINT,
-        allowNull:false
+        type: Sequelize.INTEGER,
+        allowNull: false
       }
     });
   },
