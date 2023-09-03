@@ -2,22 +2,13 @@
   background-color: #EFE5DC;
 }
 
-.home {
-  color: rgb(251, 254, 251);
+.a {
+  color: #F80000;
 }
 
-.userCards {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  text-align: center;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.a:hover {
+  color: #FBFEFB;
+  text-shadow: 1px 1px 1px #F80000;
 }
 
 .header {
@@ -28,4 +19,61 @@
   font-weight: 500;
   font-size: 72px;
   text-shadow: 2px 2px 5px #F80000;
+}
+
+.linkList {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.diningIn, .goingOut, .recipeRec, .restRec {
+  display: flex;
+  color: #D0B8AC;
+  text-shadow: 5px 5px 5px #F3D8C7;
+}
+
+.out {
+  display: flex;
+  align-self: flex-end;
+}
+
+img {
+  border-radius: 100px;
+  filter: drop-shadow(10px 10px 10px #F3D8C7)
+}
+
+/* .userCards {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+} */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropdown {
+  max-width: 300px;
+}
+
+.recipes, .restaurants {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.recipeList {
+  list-style: none;
 }

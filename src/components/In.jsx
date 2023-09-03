@@ -14,9 +14,9 @@ export default function In() {
     }, [] )
 
     return (
-        <div>
-             <h1>Recipe Recommedations</h1>
-             <ul>
+        <div className="recipes">
+             <h1 className="recipeRec">Recipe Recommendations</h1>
+             <ul className="recipeList">
                 {recipes.map((recipe,index) => (
                     <li key={index} style={{paddingBottom:'25px'}}>
                         <div>Name: {recipe.name}</div>
