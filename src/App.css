@@ -2,8 +2,35 @@
   background-color: #EFE5DC;
 }
 
+.a {
+  color: #F80000;
+}
+
+.a:hover {
+  color: #FBFEFB;
+  text-shadow: 1px 1px 1px #F80000;
+}
+
 .home {
-  color: rgb(251, 254, 251);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.diningIn, .goingOut {
+  display: flex;
+  color: #D0B8AC;
+  text-shadow: 5px 5px 5px #F3D8C7;
+}
+
+.out {
+  display: flex;
+  align-self: flex-end;
+}
+
+img {
+  border-radius: 100px;
+  filter: drop-shadow(10px 10px 10px #F3D8C7)
 }
 
 .userCards {

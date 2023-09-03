@@ -15,7 +15,7 @@ export default function In() {
 
     return (
         <div>
-             <h1>Recipe Recommedations</h1>
+             <h1>Recipe Recommendations</h1>
              <ul>
                 {recipes.map((recipe,index) => (
                     <li key={index} style={{paddingBottom:'25px'}}>
