@@ -24,7 +24,6 @@ app.get('/', (req, res) => {
     })
 })
 
-
 //LISTEN
 app.listen(4005,() => {
     console.log('Server is running on port 4005')

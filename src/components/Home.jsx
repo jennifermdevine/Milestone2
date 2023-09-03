@@ -1,11 +1,14 @@
+
 import livingRoom from '../livingroom.png'
 import restaurant from '../restaurant.png'
 import AddFoodie from './AddFoodie'
 import UserCards from './UserCards'
 
 
+
 function Home() {
     return (
+
         <div className="home">
             <div className="diningIn">
                 <h1>Are you dining in?</h1>
@@ -21,3 +24,4 @@ function Home() {
 }
 
 export default Home
+
