@@ -42,7 +42,7 @@ export default function RecipesList() {
              <div>
                 <Link to='/recipes'><Button variant='danger'>Back to Recommendations</Button></Link>
             </div>
-
+            <br />
             <div><Link to='/recipes/addRecipe'><Button variant="danger">Add recipe</Button></Link></div>
             
            
