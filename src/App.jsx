@@ -23,9 +23,9 @@ function App() {
           <Nav />
           <br />
             <ul className="linkList">
-            <li><Link className="a" to="/">Home </Link></li>
-            
             <li><Link className="a" to='/recipes'>In</Link></li>
+
+            <li><Link className="a" to="/">Home </Link></li>
             
             <li><Link className="a" to="/restaurants">Out</Link></li>
             </ul>
