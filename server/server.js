@@ -18,6 +18,9 @@ app.use('/api/recipes', recipesController)
 const restaurantsController = require('./controllers/restaurants_controller')
 app.use('/api/restaurants', restaurantsController)
 
+const peopleController = require('./controllers/people_controller')
+app.use('/api/people', peopleController)
+
 
 app.get('/', (req, res) => {
     res.status(200).json({

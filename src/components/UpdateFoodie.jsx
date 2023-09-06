@@ -2,23 +2,38 @@ import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
-import { Link} from 'react-router-dom'
+import { Link, useParams} from 'react-router-dom'
+import {useState,useEffect} from 'react'
 
 
-function AddRecipe() {
+function UpdateFoodie() {
+    const [person, setPerson] = useState([''])
+    const params = useParams();
+
+    useEffect(()=> {
+        const fetchData = async () => {
+            const response = await fetch(`http://localhost:4005/api/people/foodie/${JSON.stringify(params)}`)
+            const json = await response.json()
+            setPerson(json)
+        }
+        fetchData()
+    }, [] )
+
   return (
     <div> 
         
-        <Form className="form" method="POST" action='http://localhost:4005/api/recipes'>
+
+
+
+        <Form className="form" method="POST" action={`http://localhost:4005/api/people/foodie/${person.user_id}?_method=PUT`}>
             <Row className="mb-3">
                 <Form.Group as={Col} controlId="formGridCity">
                     <Form.Label>Name:</Form.Label>
-                    <input className='form-control' placeholder="Recipe Name" id='name' name='name' required/>
+                    <input className='form-control' id='name' name='name'   defaultValue={person.name} required/>
                 </Form.Group>
             </Row>
-            <Form.Label>What protein does the recipe contain?</Form.Label>
-            <Form.Select aria-label="Default select example" placeholder='Protein' id='protein' name='protein' className="dropdown" >
-            
+            <Form.Label>What protein does the Foodie like?</Form.Label>
+            <Form.Select aria-label="Default select example"  defaultValue={person.protein} id='protein' name='protein' className="dropdown" >
                 <option value="beef" id='protein' name='protein'>Beef</option>
                 <option value="chicken" id='protein' name='protein'>Chicken</option>
                 <option value="fish" id='protein' name='protein'>Fish</option>
@@ -29,7 +44,7 @@ function AddRecipe() {
             <br />
 
             
-            <Button variant="danger"   type="submit" value="submit" >Add Recipe </Button>
+            <Button variant="danger"   type="submit" value="submit" >Update Foodie </Button>
                     
 
             <Link to='/recipes'>
@@ -42,4 +57,4 @@ function AddRecipe() {
     )
 }
 
-export default AddRecipe;
+export default UpdateFoodie;

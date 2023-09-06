@@ -24,6 +24,7 @@ export default function In() {
 
                 {recipes.map((recipe, index) => (
 
+
                     <Link to={`recipe/${recipe.recipe_id}`}>
                         <li key={index} style={{ paddingBottom: '25px' }}>
                             <div>Name: {recipe.name}</div>
