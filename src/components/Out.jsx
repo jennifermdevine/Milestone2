@@ -1,4 +1,6 @@
 import {useState,useEffect} from 'react'
+import { useParams,Link,Route,Outlet,UseNavigate} from 'react-router-dom'
+import Button from 'react-bootstrap/Button';
 
 
 export default function Out() {
@@ -18,13 +20,21 @@ export default function Out() {
             <h1 className="restRec">Restaurant Recommendations</h1>
             <ul className="restaurantList">
                 {restaurants.map((restaurant,index) => (
+                    <Link to={`restaurant/${restaurant.restaurant_id}`}>
                     <li key={index} style={{paddingBottom:'25px'}}>
                         <div>Name: {restaurant.name}</div>
                         <div>Protein: {restaurant.protein}</div>
                     </li>
+                    </Link>
                 ))}
             </ul>
+
+            <div>
+                <Link to='/restaurants/list'><Button variant="danger">List</Button></Link>
+            </div>
+
         </div>
 
+
     )
-} 
+}

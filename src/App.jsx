@@ -9,6 +9,7 @@ import Out from './components/Out';
 import './App.css';
 import AddRecipe from './components/AddRecipe';
 import InRecipe from './components/InRecipe';
+import InRestaurant from './components/InRestaurant'
 import RecipesList from './components/RecipesList';
 
 function App() {
@@ -24,9 +25,9 @@ function App() {
           <br />
             <ul className="linkList">
             <li><Link className="a" to="/">Home </Link></li>
-            
+
             <li><Link className="a" to='/recipes'>In</Link></li>
-            
+
             <li><Link className="a" to="/restaurants">Out</Link></li>
             </ul>
         </header>
