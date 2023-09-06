@@ -19,6 +19,7 @@ export default function In() {
 
     return (
         <div className="recipes">
+            
              <h1 className="recipeRec">Recipe Recommendations</h1>
              <ul className="recipeList">
 
