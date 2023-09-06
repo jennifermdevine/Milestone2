@@ -35,9 +35,9 @@ function Home() {
                 <img src={restaurant} alt="a dark and intimate restaurant" width="300" height="450px"/>
                 <h1 className="out">...or going out?</h1>
             </div>
-           
-
-            <div>
+           </div>
+          <br />
+          <div className="foodies">
             <h1 className="recipeRec">Foodies</h1>
              <ul className="recipeList">
 
@@ -53,10 +53,8 @@ function Home() {
                 ))}
              </ul>
             </div>
-          <br />
-        <UserCards />
         </div>
-        </div>
+
     
         
     )

@@ -11,7 +11,7 @@ import Out from './components/Out';
 import './App.css';
 import AddRecipe from './components/AddRecipe';
 import InRecipe from './components/InRecipe';
-import InRestaurant from './components/InRestaurant'
+import InRestaurant from './components/inRestaurant'
 import RecipesList from './components/RecipesList';
 import UserCards from './components/UserCards';
 
