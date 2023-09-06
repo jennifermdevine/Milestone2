@@ -4,7 +4,7 @@ const { Restaurant } = db
 
 //get All Restaurants
 restaurants.get('/', async (req,res) => {
-    try {
+     try {
         const foundRestaurants = await Restaurant.findAll()
         res.status(200).json(foundRestaurants)
     } catch (err){
