@@ -8,7 +8,6 @@ import UserCards from './UserCards'
 
 function Home() {
     return (
-
         <div className="home">
             <div className="diningIn">
                 <h1>Are you dining in?</h1>
