@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react'
-
+import {useState,useEffect} from 'react'
+import livingRoom from '../livingroom.png'
 import Button from 'react-bootstrap/Button';
 import { UseParams, Link, Route, Outlet, UseNavigate } from 'react-router-dom'
 
@@ -18,6 +18,8 @@ export default function In() {
     }, [])
 
     return (
+        <div className="recipePage">
+            <img src={livingRoom} alt="a cozy living room" width="550px" height="650px" />
         <div className="recipes">
             <h1 className="recipeRec">Recipe Recommendations</h1>
             <ul className="recipeList">
@@ -43,6 +45,7 @@ export default function In() {
 
             {/* <Outlet/> */}
         </div>
-
+        </div>
+       
     )
 }

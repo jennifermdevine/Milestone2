@@ -1,5 +1,6 @@
 import {useState,useEffect} from 'react'
 import Button from 'react-bootstrap/Button';
+import livingRoom from '../livingroom.png'
 import { useParams,Link,Route,Outlet,UseNavigate} from 'react-router-dom'
 
 export default function InRecipe(props) {
@@ -18,17 +19,19 @@ export default function InRecipe(props) {
   
 
     return (
+        <div className="recipePage">
+            <img src={livingRoom} alt="a cozy living room" width="550px" height="650px" />
         <div className="restaurants">
             <h1 className="restRec">Recipe</h1>
             <ul className="recipeList">
-                    <li  style={{paddingBottom:'25px'}}>
+                    <li style={{paddingBottom:'25px'}}>
                         <div>Name: {recipe.name}</div>
                         <div>Protein: {recipe.protein}</div>
                     </li> 
             </ul>
 
             <div>
-                <Link to='/recipes'><Button variant='danger'>Back to Recommendations</Button></Link>
+                <Link  to='/recipes'><Button variant='danger'>Back to Recommendations</Button></Link>
             </div>
 
             <div>
@@ -45,6 +48,7 @@ export default function InRecipe(props) {
             </div>
             {/* <form method="POST" action={`/places/${data.id}?_method=PUT`}></form> */}
             
+        </div>
         </div>
 
     )

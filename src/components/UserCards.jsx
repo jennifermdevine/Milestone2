@@ -5,22 +5,22 @@ function UserCard() {
     <div className="userCards">
         <Card border="danger" style={{ width: '10rem' }}>
             <Card.Body>
-                <Card.Title>Elva</Card.Title>
+                <Card.Title>Test Name</Card.Title>
             </Card.Body>
         </Card>
         <Card border="danger" style={{ width: '10rem' }}>
             <Card.Body>
-                <Card.Title>Matthew</Card.Title>
+                <Card.Title>Test Name</Card.Title>
             </Card.Body>
         </Card>
         <Card border="danger" style={{ width: '10rem' }}>
             <Card.Body>
-                <Card.Title>Zoren</Card.Title>
+                <Card.Title>Test Name</Card.Title>
             </Card.Body>
         </Card>
         <Card border="danger" style={{ width: '10rem' }}>
             <Card.Body>
-                <Card.Title>Jennifer</Card.Title>
+                <Card.Title>Test Name</Card.Title>
             </Card.Body>
         </Card>
     </div>
