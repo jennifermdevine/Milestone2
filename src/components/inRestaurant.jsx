@@ -46,5 +46,3 @@ export default function InRestaurant(props) {
 
     )
 }
-
-module.exports = InRestaurant
