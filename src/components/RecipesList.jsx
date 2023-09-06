@@ -1,6 +1,7 @@
 import {useState,useEffect} from 'react'
 import Button from 'react-bootstrap/Button';
 import InRecipe from './InRecipe'
+import livingRoom from '../livingroom.png'
 import {BrowserRouter as Router, Link, Route,Routes} from 'react-router-dom'
 
 
@@ -17,12 +18,13 @@ export default function RecipesList() {
     }, [] )
 
     return (
+        <div className="recipePage">
+            <img src={livingRoom} alt="a cozy living room" width="550px" height="650px" />
+        
         <div className="recipes">
-             <h1 className="recipeRec">Recipes List</h1>
-           
-             
+            <h1 className="recipeRec">Recipes List</h1>
                     
-             <ul className="recipeList">
+            <ul className="recipeList">
                 {recipes.map((recipe,index) => (
                     <li key={index} style={{paddingBottom:'25px'}}>
                         
@@ -44,6 +46,7 @@ export default function RecipesList() {
             <div><Link to='/recipes/addRecipe'><Button variant="danger">Add recipe</Button></Link></div>
             
            
+        </div>
         </div>
        
     )
