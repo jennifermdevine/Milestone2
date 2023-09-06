@@ -16,7 +16,6 @@ export default function InRestaurant(props) {
     }, [] )
 
 
-
     return (
         <div className="restaurants">
             <h1 className="restRec">Restaurant</h1>
@@ -47,3 +46,5 @@ export default function InRestaurant(props) {
 
     )
 }
+
+module.exports = InRestaurant
