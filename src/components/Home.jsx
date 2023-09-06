@@ -2,7 +2,7 @@
 import livingRoom from '../livingroom.png'
 import restaurant from '../restaurant.png'
 import AddFoodie from './AddFoodie'
-// import UserCards from './UserCards'
+import UserCards from './UserCards'
 
 
 
@@ -21,7 +21,7 @@ function Home() {
             </div>
         </div>
         <br />
-        {/* <UserCards /> */}
+        <UserCards />
         </div>
     )
 }

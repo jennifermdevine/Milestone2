@@ -1,5 +1,5 @@
 import {useState,useEffect} from 'react'
-
+import restaurant from '../restaurant.png'
 
 export default function Out() {
     const [restaurants, setRestaurants] = useState([])
@@ -14,6 +14,7 @@ export default function Out() {
     }, [] )
 
     return (
+        <div className="restPage">
         <div className="restaurants">
             <h1 className="restRec">Restaurant Recommendations</h1>
             <ul className="restaurantList">
@@ -24,6 +25,8 @@ export default function Out() {
                     </li>
                 ))}
             </ul>
+        </div>
+        <img src={restaurant} alt="a dark and intimate restaurant" width="550" height="650px"/>
         </div>
 
     )

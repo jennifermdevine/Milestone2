@@ -18,8 +18,9 @@ export default function In() {
     }, [] )
 
     return (
+        <div className="recipePage">
+            <img src={livingRoom} alt="a cozy living room" width="550px" height="650px" />
         <div className="recipes">
-            <img src={livingRoom} alt="a cozy living room" width="400px" height="450px" />
              <h1 className="recipeRec">Recipe Recommendations</h1>
              <ul className="recipeList">
 
@@ -43,6 +44,6 @@ export default function In() {
             
            {/* <Outlet/> */}
         </div>
-       
+        </div>
     )
 } 
