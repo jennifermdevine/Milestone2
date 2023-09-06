@@ -1,6 +1,6 @@
 import {useState,useEffect} from 'react'
 import restaurant from '../restaurant.png'
-import { useParams,Link,Route,Outlet,UseNavigate} from 'react-router-dom'
+import { Link} from 'react-router-dom'
 import Button from 'react-bootstrap/Button';
 
 export default function Out() {

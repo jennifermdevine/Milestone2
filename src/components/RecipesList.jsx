@@ -1,8 +1,7 @@
 import {useState,useEffect} from 'react'
 import Button from 'react-bootstrap/Button';
-import InRecipe from './InRecipe'
 import livingRoom from '../livingroom.png'
-import {BrowserRouter as Router, Link, Route,Routes} from 'react-router-dom'
+import {BrowserRouter as  Link } from 'react-router-dom'
 
 
 export default function RecipesList() {

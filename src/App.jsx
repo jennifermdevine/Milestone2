@@ -5,7 +5,7 @@ import InFoodie from './components/InFoodie';
 import UpdateRecipe from './components/UpdateRecipe';
 import Nav from './components/Nav';
 import UpdateFoodie from './components/UpdateFoodie'
-import AddFoodie from './components/AddFoodie';
+
 import Home from './components/Home';
 import Out from './components/Out';
 import './App.css';
@@ -16,8 +16,6 @@ import RecipesList from './components/RecipesList';
 import UserCards from './components/UserCards';
 
 function App() {
-  const [data,setData] = useState([])
-
 
   return (
     <div className="App">
@@ -50,6 +48,10 @@ function App() {
             <Route path={`recipes/list/recipe/:id/Update/:id`} element={<UpdateRecipe />}></Route>
             <Route path={`/recipes/recipe/:id`} element={<InRecipe />} ></Route>
             <Route path={`/recipes/list/recipe/:id`} element={<InRecipe />} ></Route>
+            <Route path={`/restaurants/restaurant/:id`} element={<InRestaurant />} ></Route>
+            <Route path={`/restaurants/list/restaurant/:id`} element={<InRestaurant />} ></Route>
+          
+            
           </Routes>
           
         </main>
