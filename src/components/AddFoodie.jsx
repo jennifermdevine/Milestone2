@@ -6,6 +6,7 @@ import Row from 'react-bootstrap/Row';
 function AddFoodie() {
   return (
     <div> 
+
         <Form className="form">
             <Row className="mb-3">
                 <Form.Group as={Col} controlId="formGridCity">
@@ -24,7 +25,7 @@ function AddFoodie() {
             <br />
             <br />
             <Button variant="danger" type="submit">
-                Add Foodie
+                 Add Foodie
             </Button>
         </Form>     
     </div>
