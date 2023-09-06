@@ -10,6 +10,7 @@ import './App.css';
 import AddRecipe from './components/AddRecipe';
 import InRecipe from './components/InRecipe';
 import RecipesList from './components/RecipesList';
+import UserCards from './components/UserCards';
 
 function App() {
   const [data,setData] = useState([])
@@ -30,7 +31,6 @@ function App() {
             <li><Link className="a" to="/restaurants">Out</Link></li>
             </ul>
         </header>
-
         <main>
           <Routes>
             <Route path='/' element={<Home/>}></Route>
@@ -44,7 +44,9 @@ function App() {
             <Route path={`/recipes/recipe/:id`} element={<InRecipe />} ></Route>
             <Route path={`/recipes/list/recipe/:id`} element={<InRecipe />} ></Route>
           </Routes>
+          
         </main>
+        
       </Router>
     </div>
   );

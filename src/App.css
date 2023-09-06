@@ -29,6 +29,7 @@
 
 .home {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
@@ -49,12 +50,12 @@ img {
   filter: drop-shadow(10px 10px 10px #F3D8C7)
 }
 
-/* .userCards {
+.userCards {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   text-align: center;
-} */
+}
 
 .form {
   display: flex;
@@ -69,7 +70,7 @@ img {
 
 .recipes, .restaurants {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
 }

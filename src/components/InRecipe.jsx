@@ -21,14 +21,14 @@ export default function InRecipe(props) {
         <div className="restaurants">
             <h1 className="restRec">Recipe</h1>
             <ul className="recipeList">
-                    <li  style={{paddingBottom:'25px'}}>
+                    <li style={{paddingBottom:'25px'}}>
                         <div>Name: {recipe.name}</div>
                         <div>Protein: {recipe.protein}</div>
                     </li> 
             </ul>
 
             <div>
-                <Link to='/recipes'><Button variant='danger'>Back to Recommendations</Button></Link>
+                <Link  to='/recipes'><Button variant='danger'>Back to Recommendations</Button></Link>
             </div>
 
             <div>
