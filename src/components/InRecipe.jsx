@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import {useState,useEffect} from 'react'
 import Button from 'react-bootstrap/Button';
 import livingRoom from '../livingroom.png'
@@ -16,7 +17,7 @@ export default function InRecipe(props) {
         fetchData()
     }, [] )
 
-  
+
 
     return (
         <div className="recipePage">
@@ -27,7 +28,7 @@ export default function InRecipe(props) {
                     <li style={{paddingBottom:'25px'}}>
                         <div>Name: {recipe.name}</div>
                         <div>Protein: {recipe.protein}</div>
-                    </li> 
+                    </li>
             </ul>
 
             <div>
@@ -38,7 +39,7 @@ export default function InRecipe(props) {
                 <Link to='/recipes/list'><Button variant='danger'>Back to Recipe List</Button></Link>
             </div>
 
-        
+
             <form method = "POST" action={`http://localhost:4005/api/recipes/recipe/${recipe.recipe_id}?_method=DELETE`}>
                 <Button type="submit" className="btn btn-danger">Delete</Button>
             </form>
@@ -47,9 +48,9 @@ export default function InRecipe(props) {
                 <Link to={`Update/${recipe.recipe_id}`}><Button variant='danger'>Update Recipe</Button></Link>
             </div>
             {/* <form method="POST" action={`/places/${data.id}?_method=PUT`}></form> */}
-            
+
         </div>
         </div>
 
     )
-} 
+}

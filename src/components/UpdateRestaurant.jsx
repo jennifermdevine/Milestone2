@@ -6,15 +6,15 @@ import { Link, useParams} from 'react-router-dom'
 import {useState,useEffect} from 'react'
 
 
-function UpdateFoodie() {
-    const [person, setPerson] = useState([''])
+function UpdateRestaurant() {
+    const [restaurant, setRestaurant] = useState([''])
     const params = useParams();
 
     useEffect(()=> {
         const fetchData = async () => {
-            const response = await fetch(`http://localhost:4005/api/people/foodie/${JSON.stringify(params)}`)
+            const response = await fetch(`http://localhost:4005/api/restaurants/restaurant/${JSON.stringify(params)}`)
             const json = await response.json()
-            setPerson(json)
+            setRestaurant(json)
         }
         fetchData()
     }, [] )
@@ -25,29 +25,35 @@ function UpdateFoodie() {
 
 
 
-        <Form className="form" method="POST" action={`http://localhost:4005/api/people/foodie/${person.user_id}?_method=PUT`}>
+        <Form className="form" method="POST" action={`http://localhost:4005/api/restaurants/restaurant/${restaurant.restaurant_id}?_method=PUT`}>
             <Row className="mb-3">
                 <Form.Group as={Col} controlId="formGridCity">
                     <Form.Label>Name:</Form.Label>
-                    <input className='form-control' id='name' name='name'   defaultValue={person.name} required/>
+                    <input className='form-control' id='name' name='name'   defaultValue={restaurant.name} required/>
                 </Form.Group>
             </Row>
-            <Form.Label>What protein does the Foodie like?</Form.Label>
-            <Form.Select aria-label="Default select example"  defaultValue={person.protein} id='protein' name='protein' className="dropdown" >
+            <Form.Label>What protein is in the restaurant?</Form.Label>
+            <Form.Select aria-label="Default select example"  defaultValue={restaurant.protein} id='protein' name='protein' className="dropdown" >
                 <option value="beef" id='protein' name='protein'>Beef</option>
                 <option value="chicken" id='protein' name='protein'>Chicken</option>
                 <option value="fish" id='protein' name='protein'>Fish</option>
                 <option value="pork" id='protein' name='protein'>Pork</option>
                 <option value="meatless" id='protein' name='protein'>Meatless</option>
             </Form.Select>
+
+
+            <Form.Group as={Col} controlId="formGridCity">
+                    <Form.Label>year_founded:</Form.Label>
+                    <input className='form-control'types ='number' placeholder="year_founded" id='year_founded' name='year_founded' required/>
+                </Form.Group>
             <br />
             <br />
 
 
-            <Button variant="danger"   type="submit" value="submit" >Update Foodie </Button>
+            <Button variant="danger"   type="submit" value="submit" >Update Recipe </Button>
 
 
-            <Link to='/recipes'>
+            <Link to='/restaurants'>
             <Button variant="danger">
                 Back to Recommendations
             </Button>
@@ -57,4 +63,4 @@ function UpdateFoodie() {
     )
 }
 
-export default UpdateFoodie;
+export default UpdateRestaurant;
