@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import {useState,useEffect} from 'react'
 import livingRoom from '../livingroom.png'
 import Button from 'react-bootstrap/Button';
@@ -46,6 +47,6 @@ export default function In() {
             {/* <Outlet/> */}
         </div>
         </div>
-       
+
     )
 }

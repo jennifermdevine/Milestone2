@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import {useState,useEffect} from 'react'
 import Button from 'react-bootstrap/Button';
 import { useParams,Link,Route,Outlet,UseNavigate} from 'react-router-dom'
@@ -23,6 +24,7 @@ export default function InRestaurant(props) {
                     <li  style={{paddingBottom:'25px'}}>
                         <div>Name: {restaurant.name}</div>
                         <div>Protein: {restaurant.protein}</div>
+                        <div>Year Founded:{restaurant.year_founded}</div>
                     </li>
             </ul>
         <div>
@@ -33,7 +35,7 @@ export default function InRestaurant(props) {
             </div>
 
 
-            <form method = "POST" action={`http://localhost:4005/api/retaurants/restaurant/${restaurant.restaurant_id}?_method=DELETE`}>
+            <form method = "POST" action={`http://localhost:4005/api/restaurants/restaurant/${restaurant.restaurant_id}?_method=DELETE`}>
                 <Button type="submit" className="btn btn-danger">Delete</Button>
             </form>
 

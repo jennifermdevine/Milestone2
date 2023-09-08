@@ -51,26 +51,47 @@ restaurants.post('/', async (req, res) => {
     console.log(req.body.protein)
     const newRestaurant = await Restaurant.create(req.body)
 
-    res.redirect('http://localhost:3000/restaurant')
+    res.redirect('http://localhost:3000/restaurants')
 
 })
 
 
+restaurants.delete('/restaurant/:id', async(req,res) => {
+    const {id} = req.params
 
 
-// restaurants.put('/recipe/:id', async (req, res) => {
-//     const { id } = req.params
-//     try {
-//         const updatedRecipe = await Recipe.update(req.body, {
-//             where: {
-//                 recipe_id: id
-//             }
-//         });
-//         res.redirect('http://localhost:3000/recipes')
-//     } catch (error) {
-//         res.status(500).json(error)
-//     }
-// })
+    try{
+        const deleteRestaurant= await Restaurant.destroy({
+            where: {
+                restaurant_id: id
+            }
+        });
+         res.redirect('http://localhost:3000/restaurants')
+        // res.status(200).json({
+        //     message: `Successfully deleted restaurant id ${id}`,})
+    } catch(error) {
+        res.status(500).json(error)
+    }
+
+
+})
+
+
+restaurants.put('/restaurant/:id', async(req,res) => {
+    const {id} = req.params
+    try{
+        const updatedRestaurant= await Restaurant.update(req.body, {
+            where: {
+                restaurant_id: id
+            }
+        });
+        res.redirect('http://localhost:3000/restaurants')
+    } catch(error) {
+        res.status(500).json(error)
+    }
+})
+
+
 
 
 

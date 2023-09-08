@@ -25,6 +25,7 @@ export default function Out() {
                     <li key={index} style={{paddingBottom:'25px'}}>
                         <div>Name: {restaurant.name}</div>
                         <div>Protein: {restaurant.protein}</div>
+                        <div>Year Founded:{restaurant.year_founded}</div>
                     </li>
                     </Link>
                 ))}
