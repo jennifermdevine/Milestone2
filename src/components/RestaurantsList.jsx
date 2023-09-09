@@ -28,7 +28,7 @@ export default function RestaurantsList() {
           {restaurants.map((restaurant, index) => (
             <li key={index} style={{ paddingBottom: '25px' }}>
 
-              <Link to={`restaurant/${restaurant.restaurant_id}`}>
+              <Link className="a" to={`restaurant/${restaurant.restaurant_id}`}>
                 <li key={index} style={{ paddingBottom: '25px' }}>
                   <div>Name: {restaurant.name}</div>
                   <div>Protein: {restaurant.protein}</div>
