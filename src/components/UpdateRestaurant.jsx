@@ -43,14 +43,14 @@ function UpdateRestaurant() {
 
 
             <Form.Group as={Col} controlId="formGridCity">
-                    <Form.Label>year_founded:</Form.Label>
-                    <input className='form-control'types ='number' placeholder="year_founded" id='year_founded' name='year_founded' required/>
+                    <Form.Label>dish 1:</Form.Label>
+                    <input className='form-control'  placeholder="dish1" id='dish1' name='dish1' />
                 </Form.Group>
             <br />
             <br />
 
 
-            <Button variant="danger"   type="submit" value="submit" >Update Recipe </Button>
+            <Button variant="danger"   type="submit" value="submit" >Update Restaurant </Button>
 
 
             <Link to='/restaurants'>

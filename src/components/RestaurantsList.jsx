@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { useState, useEffect } from 'react'
 import Button from 'react-bootstrap/Button';
-import InRestaurant from './InRestaurant'
 import restaurant from '../restaurant.png'
 import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom'
 

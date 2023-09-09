@@ -14,24 +14,50 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Recipe.init({
-    recipe_id: {
+    recipe_id:{
       type:DataTypes.INTEGER,
       primaryKey:true,
       autoIncrement:true
-    },
-    name: {
+    } ,
+    name:{
       type:DataTypes.STRING,
-      allowNull: false
-    },
+      allowNull:false
+    } ,
+    img:{
+      type:DataTypes.STRING,
+      allowNull:false
+    } ,
     protein:{
       type:DataTypes.STRING,
-      allowNull: false
-    } 
+      allowNull:false
+    },
+    ing1:{
+      type:DataTypes.STRING,
+      allowNull:false
+    } ,
+    ing2:{
+      type:DataTypes.STRING,
+      allowNull:false
+    } ,
+    ing3:{
+      type:DataTypes.STRING,
+      allowNull:false
+    } ,
+    ing4:{
+      type:DataTypes.STRING,
+      allowNull:false
+    } ,
+    ing5:{
+      type:DataTypes.STRING,
+      allowNull:false
+    }
+     
   }, {
     sequelize,
     modelName: 'Recipe',
     tableName: 'recipes',
     timestamps: false
+
   });
   return Recipe;
 };
