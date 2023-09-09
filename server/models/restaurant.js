@@ -14,28 +14,42 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Restaurant.init({
-    restaurant_id: {
+    restaurant_id:{
       type:DataTypes.INTEGER,
       primaryKey:true,
       autoIncrement:true
-        } ,
-    name: {
+    } ,
+    name:{
       type:DataTypes.STRING,
-      allowNull: false
-    },
+      allowNull:false
+    } ,
+    img:{
+      type:DataTypes.STRING,
+      allowNull:false
+    } ,
     protein:{
       type:DataTypes.STRING,
-      allowNull: false
+      allowNull:false
     },
-    year_founded: {
-      type:DataTypes.INTEGER,
-      allowNull: false
-    }
+    dish1:{
+      type:DataTypes.STRING,
+      allowNull:false
+    } ,
+    dish2:{
+      type:DataTypes.STRING,
+      allowNull:false
+    } ,
+    dish3:{
+      type:DataTypes.STRING,
+      allowNull:false
+    } 
+     
   }, {
     sequelize,
     modelName: 'Restaurant',
     tableName: 'restaurants',
     timestamps: false
+
   });
   return Restaurant;
 };
