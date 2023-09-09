@@ -21,7 +21,7 @@ export default function Out() {
             <h1 className="restRec">Restaurant Recommendations</h1>
             <ul className="restaurantList">
                 {restaurants.map((restaurant,index) => (
-                    <Link to={`restaurant/${restaurant.restaurant_id}`}>
+                    <Link className="a" to={`restaurant/${restaurant.restaurant_id}`}>
                     <li key={index} style={{paddingBottom:'25px'}}>
                         <div>Name: {restaurant.name}</div>
                         <div>Protein: {restaurant.protein}</div>

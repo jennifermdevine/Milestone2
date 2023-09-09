@@ -1,12 +1,7 @@
-
 import livingRoom from '../livingroom.png'
 import restaurant from '../restaurant.png'
-import AddFoodie from './AddFoodie'
-import UserCards from './UserCards'
 import {useState,useEffect} from 'react'
-
-import Button from 'react-bootstrap/Button';
-import { UseParams,Link,Route,Outlet,UseNavigate} from 'react-router-dom'
+import { UseParams,Link,Route,Routes,Outlet,UseNavigate} from 'react-router-dom'
 
 
 
@@ -25,38 +20,17 @@ function Home() {
 
     return (
         <div>
-        <div className="home">
-            <div className="diningIn">
-                <h1>Are you dining in?</h1>
-                <img src={livingRoom} alt="a cozy living room" width="400px" height="450px" />
-            </div>
-            <AddFoodie/>
-            <div className="goingOut">
-                <img src={restaurant} alt="a dark and intimate restaurant" width="300" height="450px"/>
-                <h1 className="out">...or going out?</h1>
-            </div>
-           </div>
-          <br />
-          <div className="foodies">
-            <h1 className="recipeRec">Foodies</h1>
-             <ul className="recipeList">
-
-                {people.map((person,index) => (
-                    
-                    <Link to={`foodie/${person.user_id}`}>
-                    <li key={index} style={{paddingBottom:'25px'}}>
-                        <div>Name: {person.name}</div>
-                        <div>Protein: {person.protein}</div>
-                    </li>
-                    </Link>
-                    
-                ))}
-             </ul>
+            <div className="home">
+                <div className="diningIn">
+                    <h1>Are you dining in?</h1>
+                    <Link className="a" to="/recipes"><img src={livingRoom} alt="a cozy living room" width="300px" height="450px" /></Link>
+                </div>
+                <div className="goingOut">
+                    <Link to="/restaurants"><img src={restaurant} alt="a dark and intimate restaurant" width="300" height="450px"/></Link>
+                    <h1 className="out">...or going out?</h1>
+                </div>
             </div>
         </div>
-
-    
-        
     )
 }
 

@@ -26,11 +26,11 @@ export default function In() {
             <ul className="recipeList">
 
                 {recipes.map((recipe, index) => (
-                    <Link to={`recipe/${recipe.recipe_id}`}>
+                    <Link className="a" to={`recipe/${recipe.recipe_id}`}>
                         <li key={index} style={{ paddingBottom: '25px' }}>
                             <div>Name: {recipe.name}</div>
                             <div>Protein: {recipe.protein}</div>
-                            <img src={recipe.img}></img>
+                            <img className="recipeImg" src={recipe.img} alt={recipe.name}></img>
                         </li>
                     </Link>
 
