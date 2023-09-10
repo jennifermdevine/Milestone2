@@ -55,6 +55,19 @@ restaurants.post('/', async (req, res) => {
 
 })
 
+restaurants.put('/restaurant/:id', async(req,res) => {
+    const {id} = req.params
+    try{
+        const updatedRestaurant= await Restaurant.update(req.body, {
+            where: {
+                restaurant_id: id
+            }
+        });
+        res.redirect('http://localhost:3000/restaurants')
+    } catch(error) {
+        res.status(500).json(error)
+    }
+})
 
 restaurants.delete('/restaurant/:id', async(req,res) => {
     const {id} = req.params
@@ -75,23 +88,6 @@ restaurants.delete('/restaurant/:id', async(req,res) => {
 
 
 })
-
-
-restaurants.put('/restaurant/:id', async(req,res) => {
-    const {id} = req.params
-    try{
-        const updatedRestaurant= await Restaurant.update(req.body, {
-            where: {
-                restaurant_id: id
-            }
-        });
-        res.redirect('http://localhost:3000/restaurants')
-    } catch(error) {
-        res.status(500).json(error)
-    }
-})
-
-
 
 
 
