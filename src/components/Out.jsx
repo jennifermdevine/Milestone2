@@ -8,7 +8,7 @@ export default function Out() {
 
     useEffect(()=> {
         const fetchData = async () => {
-            const response = await fetch('https://in-or-out.onrender.com/restaurants')
+            const response = await fetch('https://in-or-out.onrender.com/api/restaurants')
             const json = await response.json()
             setRestaurants(json)
         }
