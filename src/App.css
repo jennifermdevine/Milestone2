@@ -87,9 +87,9 @@ img {
 
 .recipeList {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
 }
-
 
 .fa-brands {
   color: #F80000;
