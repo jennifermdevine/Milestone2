@@ -14,6 +14,8 @@ function AddRestaurant() {
                 <Form.Group as={Col} controlId="formGridCity">
                     <Form.Label>Name:</Form.Label>
                     <input className='form-control' placeholder="Restaurant Name" id='name' name='name' required/>
+                    <Form.Label>Image:</Form.Label>
+                    <input className="form-control" id="img" name="img" placeholder="Restaurant Image" />
                 </Form.Group>
             </Row>
             <Form.Label>What protein does the restaurant offer?</Form.Label>
@@ -27,8 +29,10 @@ function AddRestaurant() {
             </Form.Select>
 
             <Form.Group as={Col} controlId="formGridCity">
-                    <Form.Label>year_founded:</Form.Label>
-                    <input className='form-control'types ='number' placeholder="year_founded" id='year_founded' name='year_founded' required/>
+                    <Form.Label>Favorite Dishes</Form.Label>
+                    <input className='form-control' placeholder="Favorite Dish" id='dish1' name='dish1' required/>
+                    <input className='form-control' placeholder="Favorite Dish" id='dish2' name='dish2'/>
+                    <input className='form-control' placeholder="Favorite Dish" id='dish3' name='dish3'/>
                 </Form.Group>
             <br />
             <br />
