@@ -34,7 +34,7 @@
   align-items: center;
 }
 
-.diningIn, .goingOut, .recipeRec, .restRec, .restaurantRec, .contact {
+.diningIn, .goingOut, .recipeRec, .restRec, .restaurantRec, .contact, .recipesRec {
   display: flex;
   color: #D0B8AC;
   text-shadow: 5px 5px 5px #F3D8C7;
@@ -68,24 +68,24 @@ img {
   max-width: 300px;
 }
 
-.recipes, .restaurants, .foodies {
+.recipes, .restaurants, .foodies, .restsaurants  {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
 }
 
-.recipePage, .restPage, .restaurantPage {
+.recipePage, .restPage, .restaurantPage, .restaurantsPage {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
 
-.recipeList, .recipesList, .restaurantList {
+.recipeList, .recipesList, .restaurantList, .restaurantsList {
   list-style: none;
 }
 
-.recipeList {
+.recipeList, .restaurantList, .restaurantsList {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;

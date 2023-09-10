@@ -21,8 +21,8 @@ export default function InRecipe(props) {
     return (
         <div className="recipePage">
             <img src={recipe.img} alt={recipe.name} width="550px" height="650px" />
-        <div className="restaurants">
-            <h1 className="restRec">Recipe</h1>
+        <div className="recipes">
+            <h1 className="recipesRec">Recipe</h1>
             <ul className="recipeList">
                     <li style={{paddingBottom:'25px'}}>
                         <div>Name: {recipe.name}</div>

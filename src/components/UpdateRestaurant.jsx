@@ -30,6 +30,8 @@ function UpdateRestaurant() {
                 <Form.Group as={Col} controlId="formGridCity">
                     <Form.Label>Name:</Form.Label>
                     <input className='form-control' id='name' name='name'   defaultValue={restaurant.name} required/>
+                    <Form.Label>Image:</Form.Label>
+                    <input className="form-control" id="img" name="img" placeholder="Restaurant Image" defaultValue={restaurant.img} />
                 </Form.Group>
             </Row>
             <Form.Label>What protein is in the restaurant?</Form.Label>
@@ -41,10 +43,11 @@ function UpdateRestaurant() {
                 <option value="meatless" id='protein' name='protein'>Meatless</option>
             </Form.Select>
 
-
             <Form.Group as={Col} controlId="formGridCity">
-                    <Form.Label>dish 1:</Form.Label>
-                    <input className='form-control'  placeholder="dish1" id='dish1' name='dish1' />
+                    <Form.Label>Favorite Dishes</Form.Label>
+                    <input className='form-control' placeholder="Favorite Dish" id='dish1' name='dish1' required/>
+                    <input className='form-control' placeholder="Favorite Dish" id='dish2' name='dish2'/>
+                    <input className='form-control' placeholder="Favorite Dish" id='dish3' name='dish3'/>
                 </Form.Group>
             <br />
             <br />
