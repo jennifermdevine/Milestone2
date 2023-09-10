@@ -10,13 +10,12 @@ import Out from './components/Out';
 import './App.css';
 import AddRecipe from './components/AddRecipe';
 import InRecipe from './components/InRecipe';
-import InRestaurant from './components/InRestaurant';
 import RecipesList from './components/RecipesList';
 import Contact from './components/Contact';
 import RestaurantsList from './components/RestaurantsList';
 import AddRestaurant from './components/AddRestaurant';
 import UpdateRestaurant from './components/UpdateRestaurant';
-
+import InRestaurant from './components/InRestaurant';
 
 function App() {
   const [data, setData] = useState([])
