@@ -24,7 +24,6 @@ export default function InRestaurant(props) {
                     <li  style={{paddingBottom:'25px'}}>
                         <div>Name: {restaurant.name}</div>
                         <div>Protein: {restaurant.protein}</div>
-                        <div>Year Founded:{restaurant.year_founded}</div>
                     </li>
             </ul>
         <div>
