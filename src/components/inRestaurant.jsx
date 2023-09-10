@@ -51,6 +51,5 @@ export default function InRestaurant(props) {
             </div>
             </div>
         </div>
-</div>
     )
 }
