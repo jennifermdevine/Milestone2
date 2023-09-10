@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react'
 import Button from 'react-bootstrap/Button';
 import restaurant from '../restaurant.png'
-import { BrowserRouter as  Link} from 'react-router-dom'
+import { Link} from 'react-router-dom'
 
 
 export default function RestaurantsList() {
