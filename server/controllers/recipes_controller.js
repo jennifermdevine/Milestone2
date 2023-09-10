@@ -67,6 +67,21 @@ recipes.post('/', async(req,res) => {
 
 })
 
+//UPDATE A RECIPE
+recipes.put('/recipe/:id', async(req,res) => {
+    const {id} = req.params
+    try{
+        const updatedRecipe= await Recipe.update(req.body, {
+            where: {
+                recipe_id: id
+            }
+        });
+        res.redirect('http://localhost:3000/recipes')
+    } catch(error) {
+        res.status(500).json(error)
+    }
+})
+
 
 //delete recipe
 recipes.delete('/recipe/:id', async(req,res) => {

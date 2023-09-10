@@ -10,14 +10,12 @@ import Out from './components/Out';
 import './App.css';
 import AddRecipe from './components/AddRecipe';
 import InRecipe from './components/InRecipe';
-import InRestaurant from './components/InRestaurant'
 import RecipesList from './components/RecipesList';
 import Contact from './components/Contact';
 import RestaurantsList from './components/RestaurantsList';
 import AddRestaurant from './components/AddRestaurant';
 import UpdateRestaurant from './components/UpdateRestaurant';
-import Randomize from './components/Randomize';
-
+import InRestaurant from './components/InRestaurant';
 
 function App() {
   const [data, setData] = useState([])
@@ -33,7 +31,6 @@ function App() {
           <ul className="linkList">
           <li><Link className="a" to="/">Home </Link></li>
             <li><Link className="a" to='/recipes'>In</Link></li>   
-            <OverlayTrigger placement="bottom" overlay={<Tooltip id="tooltipRando">Randomizer</Tooltip>}><li><Link className="a"  to="/randomize">Or</Link></li></OverlayTrigger>
             <li><Link className="a" to="/restaurants">Out</Link></li>
           </ul>
         </header>
@@ -51,8 +48,6 @@ function App() {
             <Route path={`recipes/list/recipe/:id/Update/:id`} element={<UpdateRecipe />}></Route>
             <Route path={`/recipes/recipe/:id`} element={<InRecipe />} ></Route>
             <Route path={`/recipes/list/recipe/:id`} element={<InRecipe />} ></Route>
-
-            <Route path="/randomize" element={<Randomize/>}></Route>
 
             <Route path={`restaurants/restaurant/:id/Update/:id`} element={<UpdateRestaurant />}></Route>
             <Route path={`restaurants/list/restaurant/:id/Update/:id`} element={<UpdateRestaurant />}></Route>
