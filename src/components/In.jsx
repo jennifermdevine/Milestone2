@@ -23,19 +23,21 @@ export default function In() {
             <img src={livingRoom} alt="a cozy living room" width="550px" height="650px" />
         <div className="recipes">
             <h1 className="recipeRec">Recipe Recommendations</h1>
+            <div>
             <ul className="recipeList">
-
-                {recipes.map((recipe, index) => (
+                        {recipes.map((recipe, index) => (
                     <Link className="a" to={`recipe/${recipe.recipe_id}`}>
-                        <li key={index} style={{ paddingBottom: '25px' }}>
-                            <div>Name: {recipe.name}</div>
+                        <li className="recipeResults" key={index} style={{ paddingBottom: '25px' }}>
+                            <div>{recipe.name}</div>
                             <div>Protein: {recipe.protein}</div>
                             <img className="recipeImg" src={recipe.img} alt={recipe.name}></img>
                         </li>
                     </Link>
-
+                
                 ))}
+                
             </ul>
+            </div>
             <div>
                 <Link to='/recipes/list'><Button variant="danger">List</Button></Link>
             </div>

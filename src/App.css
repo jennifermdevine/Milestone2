@@ -81,9 +81,15 @@ img {
   justify-content: space-evenly;
 }
 
-.recipeList, .restaurantList {
+.recipeList, .recipesList, .restaurantList {
   list-style: none;
 }
+
+.recipeList {
+  display: flex;
+  flex-direction: row;
+}
+
 
 .fa-brands {
   color: #F80000;
@@ -92,4 +98,9 @@ img {
 .recipeImg {
   width: 100px;
   height: 100px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
 }

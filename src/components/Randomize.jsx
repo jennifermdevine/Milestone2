@@ -7,14 +7,14 @@ export default function InRecipe(props) {
     const [recipe, setRecipe] = useState([''])
     const params = useParams();
 
-    useEffect(()=> {
-        const fetchData = async () => {
-            const response = await fetch(`http://localhost:4005/api/recipes/recipe/${JSON.stringify(params)}`)
-            const json = await response.json()
-            setRecipe(json)
-        }
-        fetchData()
-    }, [] )
+    // useEffect(()=> {
+    //     const fetchData = async () => {
+    //         const response = await fetch(`http://localhost:4005/api/recipes/recipe/${JSON.stringify(params)}`)
+    //         const json = await response.json()
+    //         setRecipe(json)
+    //     }
+    //     fetchData()
+    // }, [] )
 
 
 

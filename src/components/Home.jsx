@@ -6,18 +6,6 @@ import { UseParams,Link,Route,Routes,Outlet,UseNavigate} from 'react-router-dom'
 
 
 function Home() {
-    const [people, setPeople] = useState([])
-
-    useEffect(()=> {
-        const fetchData = async () => {
-            const response = await fetch('http://localhost:4005/api/people')
-            const json = await response.json()
-            setPeople(json)
-            
-        }
-        fetchData()
-    }, [] )
-
     return (
         <div>
             <div className="home">
