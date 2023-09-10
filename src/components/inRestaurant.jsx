@@ -20,7 +20,7 @@ export default function InRestaurant(props) {
     return (
         <div className="restaurantsPage">
             <img src={restaurant.img} alt={restaurant.name} width="550px" height="650px" />
-        <div className="restsaurants">    
+        <div className="restaurants">
             <h1 className="restRec">Restaurant</h1>
             <ul className="restaurantsList">
                     <li  style={{paddingBottom:'25px'}}>
@@ -51,6 +51,6 @@ export default function InRestaurant(props) {
             </div>
             </div>
         </div>
-
+</div>
     )
 }
