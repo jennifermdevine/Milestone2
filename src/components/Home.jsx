@@ -1,7 +1,7 @@
 import livingRoom from '../livingroom.png'
 import restaurant from '../restaurant.png'
-import {useState,useEffect} from 'react'
-import { UseParams,Link,Route,Routes,Outlet,UseNavigate} from 'react-router-dom'
+
+import {Link} from 'react-router-dom'
 
 
 

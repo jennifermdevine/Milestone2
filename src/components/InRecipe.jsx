@@ -1,9 +1,9 @@
 /* eslint-disable no-unused-vars */
 import {useState,useEffect} from 'react'
 import Button from 'react-bootstrap/Button';
-import { useParams,Link,Route,Outlet,UseNavigate} from 'react-router-dom'
+import { useParams,Link} from 'react-router-dom'
 
-export default function InRecipe(props) {
+export default function InRecipe() {
     const [recipe, setRecipe] = useState([''])
     const params = useParams();
 

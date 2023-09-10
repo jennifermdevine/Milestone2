@@ -2,7 +2,7 @@
 import {useState,useEffect} from 'react'
 import livingRoom from '../livingroom.png'
 import Button from 'react-bootstrap/Button';
-import { UseParams, Link, Route, Outlet, UseNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 export default function In() {
