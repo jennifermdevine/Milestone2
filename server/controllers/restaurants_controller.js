@@ -2,7 +2,7 @@ const restaurants = require('express').Router()
 const db = require('../models')
 const {Op} = require('sequelize')
 const { Restaurant } = db
-
+//get
 restaurants.get('/', async (req, res) => {
     try {
         const foundRestaurants = await Restaurant.findAll()
@@ -45,7 +45,7 @@ restaurants.get('/restaurant/:id', async (req, res) => {
     }
 })
 
-
+//add
 restaurants.post('/', async (req, res) => {
     console.log(req.body.name)
     console.log(req.body.protein)
@@ -55,10 +55,10 @@ restaurants.post('/', async (req, res) => {
 
 })
 
-
+//delete
 restaurants.delete('/restaurant/:id', async(req,res) => {
     const {id} = req.params
-
+    console.log('hi')
 
     try{
         const deleteRestaurant= await Restaurant.destroy({
@@ -75,7 +75,7 @@ restaurants.delete('/restaurant/:id', async(req,res) => {
 
 
 })
-
+//update
 
 restaurants.put('/restaurant/:id', async(req,res) => {
     const {id} = req.params

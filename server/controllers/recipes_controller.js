@@ -67,6 +67,45 @@ recipes.post('/', async(req,res) => {
 
 })
 
+//DELETE A RECIPE
+recipes.delete('/recipe/:id', async(req,res) => {
+    const {id} = req.params
+    // console.log(req.params)
+    // console.log('hi')
+
+    try{
+        const deleteRecipe= await Recipe.destroy({
+            where: {
+                recipe_id: id
+            }
+        });
+         res.redirect('http://localhost:3000/recipes')
+        // res.status(200).json({
+        //     message: `Successfully deleted recipe id ${id}`,})
+    } catch(error) {
+        res.status(500).json(error)
+    }
+
+
+})
+
+
+//UPDATE A RECIPE
+recipes.put('/recipe/:id', async(req,res) => {
+    const {id} = req.params
+    try{
+        const updatedRecipe= await Recipe.update(req.body, {
+            where: {
+                recipe_id: id
+            }
+        });
+        res.redirect('http://localhost:3000/recipes')
+    } catch(error) {
+        res.status(500).json(error)
+    }
+})
+
+
 
 
 module.exports = recipes
