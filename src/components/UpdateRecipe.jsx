@@ -21,10 +21,6 @@ function UpdateRecipe() {
 
   return (
     <div> 
-        
-
-
-
         <Form className="form" method="POST" action={`http://localhost:4005/api/recipes/recipe/${recipe.recipe_id}?_method=PUT`}>
             <Row className="mb-3">
                 <Form.Group as={Col} controlId="formGridCity">
