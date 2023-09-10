@@ -24,7 +24,7 @@ export default function RestaurantsList() {
       <div className="restaurants">
         <h1 className="restaurantRec">Restaurants List</h1>
 
-        <ul className="restaurantList">
+        <ul className="restaurantxList">
           {restaurants.map((restaurant, index) => (
             <li key={index} style={{ paddingBottom: '25px' }}>
 

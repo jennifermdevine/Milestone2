@@ -81,11 +81,11 @@ img {
   justify-content: space-evenly;
 }
 
-.recipeList, .recipesList, .restaurantList, .restaurantsList {
+.recipeList, .recipesList, .restaurantList, .restaurantsList, .restaurantxList {
   list-style: none;
 }
 
-.recipeList, .restaurantsList {
+.recipeList, .restaurantsList, .restaurantList {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
