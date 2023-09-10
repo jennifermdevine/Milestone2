@@ -18,6 +18,8 @@ export default function InRestaurant(props) {
 
 
     return (
+        <div className="restaurantPage">
+            <img src= {restaurant.img} alt={restaurant.name} width='550px' height='650px' />
         <div className="restaurants">
             <h1 className="restRec">Restaurant</h1>
             <ul className="restaurantList">
@@ -44,6 +46,6 @@ export default function InRestaurant(props) {
             {/* <form method="POST" action={`/places/${data.id}?_method=PUT`}></form> */}
 
         </div>
-
+</div>
     )
 }
