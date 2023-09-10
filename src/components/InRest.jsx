@@ -8,7 +8,7 @@ export default function InRest() {
 
     useEffect(()=> {
         const fetchData = async () => {
-            const response = await fetch(`http://localhost:4005/api/restaurants/restaurant/${JSON.stringify(params)}`)
+            const response = await fetch(`https://in-or-out.onrender.com/api/restaurants/restaurant/${JSON.stringify(params)}`)
             const json = await response.json()
             setRestaurant(json)
         }
@@ -42,7 +42,7 @@ export default function InRest() {
                 <div>
                     <Link to='/restaurants/list'><Button variant='danger'>Back to Restaurant List</Button></Link>
                 </div>
-            <form method = "POST" action={`http://localhost:4005/api/restaurants/restaurant/${restaurant.restaurant_id}?_method=DELETE`}>
+            <form method = "POST" action={`https://in-or-out.onrender.com/api/restaurants/restaurant/${restaurant.restaurant_id}?_method=DELETE`}>
                 <Button type="submit" className="btn btn-danger">Delete</Button>
             </form>
             <div>

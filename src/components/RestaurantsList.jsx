@@ -10,7 +10,7 @@ export default function RestaurantsList() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch('http://localhost:4005/api/restaurants/allRestaurants')
+      const response = await fetch('https://in-or-out.onrender.com/api/restaurants/allRestaurants')
       const json = await response.json()
       setRestaurants(json)
     }
