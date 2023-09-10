@@ -14,6 +14,8 @@ function AddRecipe() {
                 <Form.Group as={Col} controlId="formGridCity">
                     <Form.Label>Name:</Form.Label>
                     <input className='form-control' placeholder="Recipe Name" id='name' name='name' required/>
+                    <Form.Label>Image:</Form.Label>
+                    <input className="form-control" id="img" name="img" />
                 </Form.Group>
             </Row>
             <Form.Label>What protein does the recipe contain?</Form.Label>
@@ -25,6 +27,13 @@ function AddRecipe() {
                 <option value="pork" id='protein' name='protein'>Pork</option>
                 <option value="meatless" id='protein' name='protein'>Meatless</option>
             </Form.Select>
+            <Form.Label>Ingredients:
+                <input className="form-control" id="ing1" name="ing1" required/>
+                <input className="form-control" id="ing2" name="ing2" />
+                <input className="form-control" id="ing3" name="ing3" />
+                <input className="form-control" id="ing4" name="ing4" />
+                <input className="form-control" id="ing5" name="ing5"/>
+            </Form.Label>
             <br />
             <br />
 

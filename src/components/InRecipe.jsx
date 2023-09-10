@@ -27,6 +27,16 @@ export default function InRecipe(props) {
                     <li style={{paddingBottom:'25px'}}>
                         <div>Name: {recipe.name}</div>
                         <div>Protein: {recipe.protein}</div>
+                        <div>Ingredients:
+                            <br/>
+                            <ul>
+                                {recipe.ing1} <br/>
+                                {recipe.ing2} <br/>
+                                {recipe.ing3} <br/>
+                                {recipe.ing4} <br/>
+                                {recipe.ing5} <br/>
+                            </ul>
+                        </div>
                     </li>
             </ul>
 

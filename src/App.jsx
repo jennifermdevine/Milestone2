@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
-import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom'
-import { useState, useEffect } from 'react'
+import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Tooltip, OverlayTrigger } from 'react-bootstrap';
 import In from './components/In';
 import UpdateRecipe from './components/UpdateRecipe';
 import Nav from './components/Nav';
@@ -32,7 +33,7 @@ function App() {
           <ul className="linkList">
           <li><Link className="a" to="/">Home </Link></li>
             <li><Link className="a" to='/recipes'>In</Link></li>   
-            <li><Link className="a"  to="/randomize">Or</Link></li>  
+            <OverlayTrigger placement="bottom" overlay={<Tooltip id="tooltipRando">Randomizer</Tooltip>}><li><Link className="a"  to="/randomize">Or</Link></li></OverlayTrigger>
             <li><Link className="a" to="/restaurants">Out</Link></li>
           </ul>
         </header>
