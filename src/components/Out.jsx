@@ -22,7 +22,7 @@ export default function Out() {
             <ul className="restaurantList">
                 {restaurants.map((restaurant,index) => (
                     <Link className="a" to={`restaurant/${restaurant.restaurant_id}`}>
-                    <li key={index} style={{paddingBottom:'25px'}}>
+                    <li key={index} style={{paddingRight:'25px'}}>
                         <div>Name: {restaurant.name}</div>
                         <div>Protein: {restaurant.protein}</div>
                         <img className="restaurantImg" src={restaurant.img} alt={restaurant.name}></img>

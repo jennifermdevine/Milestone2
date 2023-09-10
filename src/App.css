@@ -3,12 +3,14 @@
 }
 
 .a {
-  color: #F80000;
+  color: #990000;
+  text-decoration: none;
 }
 
 .a:hover {
-  color: #FBFEFB;
+  color: #CC0000;
   text-shadow: 1px 1px 1px #F80000;
+  text-decoration: none;
 }
 
 .header {
