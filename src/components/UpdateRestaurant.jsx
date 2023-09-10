@@ -45,9 +45,9 @@ function UpdateRestaurant() {
 
             <Form.Group as={Col} controlId="formGridCity">
                     <Form.Label>Favorite Dishes</Form.Label>
-                    <input className='form-control' placeholder="Favorite Dish" id='dish1' name='dish1' required/>
-                    <input className='form-control' placeholder="Favorite Dish" id='dish2' name='dish2'/>
-                    <input className='form-control' placeholder="Favorite Dish" id='dish3' name='dish3'/>
+                    <input className='form-control' placeholder="Favorite Dish" id='dish1' name='dish1' defaultValue={restaurant.dish1} required/>
+                    <input className='form-control' placeholder="Favorite Dish" id='dish2' name='dish2' defaultValue={restaurant.dish2}/>
+                    <input className='form-control' placeholder="Favorite Dish" id='dish3' name='dish3' defaultValue={restaurant.dish3}/>
                 </Form.Group>
             <br />
             <br />
