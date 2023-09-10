@@ -63,7 +63,7 @@ recipes.post('/', async(req,res) => {
     const newRecipe = await Recipe.create(req.body)
 
 
-      res.redirect('https://in-or-out.onrender.com/4005/recipes')
+      res.redirect('https://in-or-out.onrender.com/recipes')
 
 })
 
