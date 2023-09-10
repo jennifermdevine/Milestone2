@@ -3,12 +3,14 @@
 }
 
 .a {
-  color: #F80000;
+  color: #990000;
+  text-decoration: none;
 }
 
 .a:hover {
-  color: #FBFEFB;
+  color: #CC0000;
   text-shadow: 1px 1px 1px #F80000;
+  text-decoration: none;
 }
 
 .header {
@@ -30,11 +32,11 @@
 .home {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
 }
 
-.diningIn, .goingOut, .recipeRec, .restRec {
+.diningIn, .goingOut, .recipeRec, .restRec, .restaurantRec, .contact, .recipesRec {
   display: flex;
   color: #D0B8AC;
   text-shadow: 5px 5px 5px #F3D8C7;
@@ -47,14 +49,14 @@
 
 img {
   border-radius: 100px;
-  filter: drop-shadow(10px 10px 10px #F3D8C7)
+  filter: drop-shadow(10px 10px 10px #F3D8C7);
 }
 
-.userCards {
+.foodieList {
+  list-style: none;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  text-align: center;
+  flex-direction: row;
+  
 }
 
 .form {
@@ -68,19 +70,44 @@ img {
   max-width: 300px;
 }
 
-.recipes, .restaurants, .foodies {
+.recipes, .restaurants, .foodies, .restsaurants  {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
 }
 
-.recipePage, .restPage {
+.recipePage, .restPage, .restaurantPage, .restaurantsPage {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
 
-.recipeList {
+.recipeList, .recipesList, .restaurantList, .restaurantsList, .restaurantxList {
   list-style: none;
+}
+
+.recipeList, .restaurantsList, .restaurantList {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.fa-brands {
+  color: #F80000;
+}
+
+.recipeImg {
+  width: 100px;
+  height: 100px;
+}
+
+.restaurantImg {
+  width: 100px;
+  height: 100px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
 }

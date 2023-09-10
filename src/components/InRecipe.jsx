@@ -1,16 +1,15 @@
 /* eslint-disable no-unused-vars */
 import {useState,useEffect} from 'react'
 import Button from 'react-bootstrap/Button';
-import livingRoom from '../livingroom.png'
-import { useParams,Link,Route,Outlet,UseNavigate} from 'react-router-dom'
+import { useParams,Link} from 'react-router-dom'
 
-export default function InRecipe(props) {
+export default function InRecipe() {
     const [recipe, setRecipe] = useState([''])
     const params = useParams();
 
     useEffect(()=> {
         const fetchData = async () => {
-            const response = await fetch(`http://localhost:4005/api/recipes/recipe/${JSON.stringify(params)}`)
+            const response = await fetch(`https://in-or-out.onrender.com/api/recipes/recipe/${JSON.stringify(params)}`)
             const json = await response.json()
             setRecipe(json)
         }
@@ -21,13 +20,23 @@ export default function InRecipe(props) {
 
     return (
         <div className="recipePage">
-            <img src={livingRoom} alt="a cozy living room" width="550px" height="650px" />
-        <div className="restaurants">
-            <h1 className="restRec">Recipe</h1>
+            <img src={recipe.img} alt={recipe.name} width="550px" height="650px" />
+        <div className="recipes">
+            <h1 className="recipesRec">Recipe</h1>
             <ul className="recipeList">
                     <li style={{paddingBottom:'25px'}}>
                         <div>Name: {recipe.name}</div>
                         <div>Protein: {recipe.protein}</div>
+                        <div>Ingredients:
+                            <br/>
+                            <ul>
+                                {recipe.ing1} <br/>
+                                {recipe.ing2} <br/>
+                                {recipe.ing3} <br/>
+                                {recipe.ing4} <br/>
+                                {recipe.ing5} <br/>
+                            </ul>
+                        </div>
                     </li>
             </ul>
 
@@ -40,7 +49,7 @@ export default function InRecipe(props) {
             </div>
 
 
-            <form method = "POST" action={`http://localhost:4005/api/recipes/recipe/${recipe.recipe_id}?_method=DELETE`}>
+            <form method = "POST" action={`https://in-or-out.onrender.com/api/recipes/recipe/${recipe.recipe_id}?_method=DELETE`}>
                 <Button type="submit" className="btn btn-danger">Delete</Button>
             </form>
 

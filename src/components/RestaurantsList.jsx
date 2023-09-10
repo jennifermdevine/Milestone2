@@ -1,9 +1,8 @@
 /* eslint-disable no-unused-vars */
 import { useState, useEffect } from 'react'
 import Button from 'react-bootstrap/Button';
-import InRestaurant from './InRestaurant'
 import restaurant from '../restaurant.png'
-import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom'
+import { Link} from 'react-router-dom'
 
 
 export default function RestaurantsList() {
@@ -11,7 +10,7 @@ export default function RestaurantsList() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch('http://localhost:4005/api/restaurants/allRestaurants')
+      const response = await fetch('https://in-or-out.onrender.com/api/restaurants/allRestaurants')
       const json = await response.json()
       setRestaurants(json)
     }
@@ -25,15 +24,14 @@ export default function RestaurantsList() {
       <div className="restaurants">
         <h1 className="restaurantRec">Restaurants List</h1>
 
-        <ul className="restaurantList">
+        <ul className="restaurantxList">
           {restaurants.map((restaurant, index) => (
             <li key={index} style={{ paddingBottom: '25px' }}>
 
-              <Link to={`restaurant/${restaurant.restaurant_id}`}>
+              <Link className="a" to={`restaurant/${restaurant.restaurant_id}`}>
                 <li key={index} style={{ paddingBottom: '25px' }}>
                   <div>Name: {restaurant.name}</div>
                   <div>Protein: {restaurant.protein}</div>
-                  <div>Year Founded:{restaurant.year_founded}</div>
                 </li>
               </Link>
 

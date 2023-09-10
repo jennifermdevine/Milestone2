@@ -12,7 +12,7 @@ function UpdateRestaurant() {
 
     useEffect(()=> {
         const fetchData = async () => {
-            const response = await fetch(`http://localhost:4005/api/restaurants/restaurant/${JSON.stringify(params)}`)
+            const response = await fetch(`https://in-or-out.onrender.com/api/restaurants/restaurant/${JSON.stringify(params)}`)
             const json = await response.json()
             setRestaurant(json)
         }
@@ -25,11 +25,13 @@ function UpdateRestaurant() {
 
 
 
-        <Form className="form" method="POST" action={`http://localhost:4005/api/restaurants/restaurant/${restaurant.restaurant_id}?_method=PUT`}>
+        <Form className="form" method="POST" action={`https://in-or-out.onrender.com/api/restaurants/restaurant/${restaurant.restaurant_id}?_method=PUT`}>
             <Row className="mb-3">
                 <Form.Group as={Col} controlId="formGridCity">
                     <Form.Label>Name:</Form.Label>
                     <input className='form-control' id='name' name='name'   defaultValue={restaurant.name} required/>
+                    <Form.Label>Image:</Form.Label>
+                    <input className="form-control" id="img" name="img" placeholder="Restaurant Image" defaultValue={restaurant.img} />
                 </Form.Group>
             </Row>
             <Form.Label>What protein is in the restaurant?</Form.Label>
@@ -41,16 +43,17 @@ function UpdateRestaurant() {
                 <option value="meatless" id='protein' name='protein'>Meatless</option>
             </Form.Select>
 
-
             <Form.Group as={Col} controlId="formGridCity">
-                    <Form.Label>year_founded:</Form.Label>
-                    <input className='form-control'types ='number' placeholder="year_founded" id='year_founded' name='year_founded' required/>
+                    <Form.Label>Favorite Dishes</Form.Label>
+                    <input className='form-control' placeholder="Favorite Dish" id='dish1' name='dish1' defaultValue={restaurant.dish1} required/>
+                    <input className='form-control' placeholder="Favorite Dish" id='dish2' name='dish2' defaultValue={restaurant.dish2}/>
+                    <input className='form-control' placeholder="Favorite Dish" id='dish3' name='dish3' defaultValue={restaurant.dish3}/>
                 </Form.Group>
             <br />
             <br />
 
 
-            <Button variant="danger"   type="submit" value="submit" >Update Recipe </Button>
+            <Button variant="danger"   type="submit" value="submit" >Update Restaurant </Button>
 
 
             <Link to='/restaurants'>

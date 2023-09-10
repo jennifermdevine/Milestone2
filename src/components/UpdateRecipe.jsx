@@ -12,7 +12,7 @@ function UpdateRecipe() {
 
     useEffect(()=> {
         const fetchData = async () => {
-            const response = await fetch(`http://localhost:4005/api/recipes/recipe/${JSON.stringify(params)}`)
+            const response = await fetch(`https://in-or-out.onrender.com/api/recipes/recipe/${JSON.stringify(params)}`)
             const json = await response.json()
             setRecipe(json)
         }
@@ -21,15 +21,13 @@ function UpdateRecipe() {
 
   return (
     <div> 
-        
-
-
-
-        <Form className="form" method="POST" action={`http://localhost:4005/api/recipes/recipe/${recipe.recipe_id}?_method=PUT`}>
+        <Form className="form" method="POST" action={`https://in-or-out.onrender.com/api/recipes/recipe/${recipe.recipe_id}?_method=PUT`}>
             <Row className="mb-3">
                 <Form.Group as={Col} controlId="formGridCity">
                     <Form.Label>Name:</Form.Label>
                     <input className='form-control' id='name' name='name'   defaultValue={recipe.name} required/>
+                    <Form.Label>Image:</Form.Label>
+                    <input className="form-control" id="img" name="img" defaultValue={recipe.img}/>
                 </Form.Group>
             </Row>
             <Form.Label>What protein is in the recipe?</Form.Label>
@@ -40,6 +38,13 @@ function UpdateRecipe() {
                 <option value="pork" id='protein' name='protein'>Pork</option>
                 <option value="meatless" id='protein' name='protein'>Meatless</option>
             </Form.Select>
+            <Form.Label>Ingredients:
+                <input className="form-control" id="ing1" name="ing1" required defaultValue={recipe.ing1}/>
+                <input className="form-control" id="ing2" name="ing2" defaultValue={recipe.ing2}/>
+                <input className="form-control" id="ing3" name="ing3" defaultValue={recipe.ing3}/>
+                <input className="form-control" id="ing4" name="ing4" defaultValue={recipe.ing4}/>
+                <input className="form-control" id="ing5" name="ing5" defaultValue={recipe.ing5}/>
+            </Form.Label>
             <br />
             <br />
 
