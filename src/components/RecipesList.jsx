@@ -24,7 +24,7 @@ export default function RecipesList() {
         <div className="recipes">
             <h1 className="recipeRec">Recipes List</h1>
                     
-            <ul className="recipeList">
+            <ul className="recipesList">
                 {recipes.map((recipe,index) => (
                     <li key={index} style={{paddingBottom:'25px'}}>
                         

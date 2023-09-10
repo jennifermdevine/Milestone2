@@ -81,8 +81,14 @@ img {
   justify-content: space-evenly;
 }
 
-.recipeList, .restaurantList {
+.recipeList, .recipesList, .restaurantList {
   list-style: none;
+}
+
+.recipeList {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
 .fa-brands {
@@ -97,4 +103,8 @@ img {
 .restaurantImg {
   width: 100px;
   height: 100px;
+
+.container {
+  display: flex;
+  flex-direction: row;
 }

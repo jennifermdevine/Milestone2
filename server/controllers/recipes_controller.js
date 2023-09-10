@@ -68,5 +68,26 @@ recipes.post('/', async(req,res) => {
 })
 
 
+//delete recipe
+recipes.delete('/recipe/:id', async(req,res) => {
+    const {id} = req.params
+
+
+    try{
+        const deleteRecipe= await Recipe.destroy({
+            where: {
+                recipe_id: id
+            }
+        });
+         res.redirect('http://localhost:3000/recipes')
+        // res.status(200).json({
+        //     message: Successfully deleted restaurant id ${id},})
+    } catch(error) {
+        res.status(500).json(error)
+    }
+
+
+})
+
 
 module.exports = recipes
