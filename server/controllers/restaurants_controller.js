@@ -55,9 +55,9 @@ restaurants.post('/', async (req, res) => {
 
 })
 
-<<<<<<< HEAD
+
 //delete
-=======
+
 restaurants.put('/restaurant/:id', async(req,res) => {
     const {id} = req.params
     try{
@@ -71,8 +71,6 @@ restaurants.put('/restaurant/:id', async(req,res) => {
         res.status(500).json(error)
     }
 })
-
->>>>>>> refs/remotes/origin/main
 restaurants.delete('/restaurant/:id', async(req,res) => {
     const {id} = req.params
     console.log('hi')
@@ -86,7 +84,7 @@ restaurants.delete('/restaurant/:id', async(req,res) => {
             res.redirect('https://in-or-out.onrender.com/restaurants')
 
         //  res.redirect('http://localhost:4005/restaurants') for dev stage,local device building,before deployment
-        
+
         // res.status(200).json({
         //     message: `Successfully deleted restaurant id ${id}`,})
     } catch(error) {
