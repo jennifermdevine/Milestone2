@@ -22,3 +22,11 @@ easier.
 React, React Router, Express, Sequelize, Node, Supabase, and Render.
 
 Images sourced from https://unsplash.com/
+
+#### Features That May Be Added
+
+-A randomizer that chooses a random recipe or random restaurant for the user.
+
+-Adding a map to show the nearest restaurants to the user.
+
+-Adding a search option to filter recipes and restaurant meals by the protein the user is craving.
