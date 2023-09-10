@@ -3,12 +3,12 @@
 }
 
 .a {
-  color: #990000;
+  color: #e61414;
   text-decoration: none;
 }
 
 .a:hover {
-  color: #CC0000;
+  color: #e30808;
   text-shadow: 1px 1px 1px #F80000;
   text-decoration: none;
 }
@@ -19,8 +19,9 @@
   align-items: center;
   color: rgb(251, 254, 251);
   font-weight: 500;
-  font-size: 72px;
+  font-size: 95px;
   text-shadow: 2px 2px 5px #F80000;
+  font-style: italic;
 }
 
 .linkList {
@@ -38,8 +39,10 @@
 
 .diningIn, .goingOut, .recipeRec, .restRec, .restaurantRec, .contact, .recipesRec {
   display: flex;
-  color: #D0B8AC;
-  text-shadow: 5px 5px 5px #F3D8C7;
+  color: #ba7a52;
+  font-size: 3.052rem;
+  text-shadow: 5px 5px 5px #cac6c3;
+  padding: 25px;
 }
 
 .out {
@@ -85,6 +88,7 @@ img {
 
 .recipeList, .recipesList, .restaurantList, .restaurantsList, .restaurantxList {
   list-style: none;
+  font-size: 20px;
 }
 
 .recipeList, .restaurantsList, .restaurantList {
@@ -95,6 +99,7 @@ img {
 
 .fa-brands {
   color: #F80000;
+
 }
 
 .recipeImg {
@@ -110,4 +115,13 @@ img {
 .container {
   display: flex;
   flex-direction: row;
+}
+
+.linkList {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.contact {
+  font-size: 45px;
 }
