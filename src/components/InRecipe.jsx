@@ -9,7 +9,7 @@ export default function InRecipe() {
 
     useEffect(()=> {
         const fetchData = async () => {
-            const response = await fetch(`http://localhost:4005/api/recipes/recipe/${JSON.stringify(params)}`)
+            const response = await fetch(`https://in-or-out.onrender.com/api/recipes/recipe/${JSON.stringify(params)}`)
             const json = await response.json()
             setRecipe(json)
         }
@@ -49,7 +49,7 @@ export default function InRecipe() {
             </div>
 
 
-            <form method = "POST" action={`http://localhost:4005/api/recipes/recipe/${recipe.recipe_id}?_method=DELETE`}>
+            <form method = "POST" action={`https://in-or-out.onrender.com/api/recipes/recipe/${recipe.recipe_id}?_method=DELETE`}>
                 <Button type="submit" className="btn btn-danger">Delete</Button>
             </form>
 

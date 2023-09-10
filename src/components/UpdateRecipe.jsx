@@ -12,7 +12,7 @@ function UpdateRecipe() {
 
     useEffect(()=> {
         const fetchData = async () => {
-            const response = await fetch(`http://localhost:4005/api/recipes/recipe/${JSON.stringify(params)}`)
+            const response = await fetch(`https://in-or-out.onrender.com/api/recipes/recipe/${JSON.stringify(params)}`)
             const json = await response.json()
             setRecipe(json)
         }
@@ -21,7 +21,7 @@ function UpdateRecipe() {
 
   return (
     <div> 
-        <Form className="form" method="POST" action={`http://localhost:4005/api/recipes/recipe/${recipe.recipe_id}?_method=PUT`}>
+        <Form className="form" method="POST" action={`https://in-or-out.onrender.com/api/recipes/recipe/${recipe.recipe_id}?_method=PUT`}>
             <Row className="mb-3">
                 <Form.Group as={Col} controlId="formGridCity">
                     <Form.Label>Name:</Form.Label>

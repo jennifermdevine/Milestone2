@@ -9,7 +9,7 @@ function AddRecipe() {
     return (
         <div> 
             
-            <Form className="form" method="POST" action='http://localhost:4005/api/recipes'>
+            <Form className="form" method="POST" action='https://in-or-out.onrender.com/api/recipes'>
                 <Row className="mb-3">
                     <Form.Group as={Col} controlId="formGridCity">
                         <Form.Label>Name:</Form.Label>
