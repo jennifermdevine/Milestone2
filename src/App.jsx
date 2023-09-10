@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+
 import { Tooltip, OverlayTrigger } from 'react-bootstrap';
 import In from './components/In';
 import UpdateRecipe from './components/UpdateRecipe';
@@ -15,11 +15,10 @@ import Contact from './components/Contact';
 import RestaurantsList from './components/RestaurantsList';
 import AddRestaurant from './components/AddRestaurant';
 import UpdateRestaurant from './components/UpdateRestaurant';
-import InRestaurant from './components/InRestaurant';
+import InRest from './components/InRest';
+
 
 function App() {
-  const [data, setData] = useState([])
-
 
   return (
     <div className="App">
@@ -53,8 +52,8 @@ function App() {
             <Route path={`restaurants/list/restaurant/:id/Update/:id`} element={<UpdateRestaurant />}></Route>
             <Route path="/restaurants/list" element={<RestaurantsList />} />
             <Route path="/restaurants/addRestaurant" element={<AddRestaurant />}></Route>
-            <Route path={`/restaurants/restaurant/:id`} element={<InRestaurant />} ></Route>
-            <Route path={`/restaurants/list/restaurant/:id`} element={<InRestaurant />} ></Route>
+            <Route path={`/restaurants/restaurant/:id`} element={<InRest/>} ></Route>
+            <Route path={`/restaurants/list/restaurant/:id`} element={<InRest />} ></Route>
 
     
           </Routes>

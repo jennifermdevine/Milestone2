@@ -2,7 +2,7 @@
 import {useState,useEffect} from 'react'
 import livingRoom from '../livingroom.png'
 import Button from 'react-bootstrap/Button';
-import { UseParams, Link, Route, Outlet, UseNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 export default function In() {
@@ -10,7 +10,7 @@ export default function In() {
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await fetch('http://localhost:4005/api/recipes')
+            const response = await fetch('https://in-or-out.onrender.com/api/recipes')
             const json = await response.json()
             setRecipes(json)
 

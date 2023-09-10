@@ -51,7 +51,7 @@ restaurants.post('/', async (req, res) => {
     console.log(req.body.protein)
     const newRestaurant = await Restaurant.create(req.body)
 
-    res.redirect('http://localhost:3000/restaurants')
+    res.redirect('https://in-or-out.onrender.com/restaurants')
 
 })
 
@@ -63,7 +63,7 @@ restaurants.put('/restaurant/:id', async(req,res) => {
                 restaurant_id: id
             }
         });
-        res.redirect('http://localhost:3000/restaurants')
+        res.redirect('https://in-or-out.onrender.com/restaurants')
     } catch(error) {
         res.status(500).json(error)
     }
@@ -79,7 +79,10 @@ restaurants.delete('/restaurant/:id', async(req,res) => {
                 restaurant_id: id
             }
         });
-         res.redirect('http://localhost:3000/restaurants')
+            res.redirect('https://in-or-out.onrender.com/restaurants')
+
+        //  res.redirect('http://localhost:4005/restaurants') for dev stage,local device building,before deployment
+        
         // res.status(200).json({
         //     message: `Successfully deleted restaurant id ${id}`,})
     } catch(error) {

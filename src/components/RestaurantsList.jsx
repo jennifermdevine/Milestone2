@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react'
 import Button from 'react-bootstrap/Button';
 import restaurant from '../restaurant.png'
-import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom'
+import { Link} from 'react-router-dom'
 
 
 export default function RestaurantsList() {
@@ -10,7 +10,7 @@ export default function RestaurantsList() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch('http://localhost:4005/api/restaurants/allRestaurants')
+      const response = await fetch('https://in-or-out.onrender.com/api/restaurants/allRestaurants')
       const json = await response.json()
       setRestaurants(json)
     }

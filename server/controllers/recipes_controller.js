@@ -63,7 +63,7 @@ recipes.post('/', async(req,res) => {
     const newRecipe = await Recipe.create(req.body)
 
 
-      res.redirect('http://localhost:3000/recipes')
+      res.redirect('https://in-or-out.onrender.com/recipes')
 
 })
 
@@ -76,7 +76,7 @@ recipes.put('/recipe/:id', async(req,res) => {
                 recipe_id: id
             }
         });
-        res.redirect('http://localhost:3000/recipes')
+        res.redirect('https://in-or-out.onrender.com/recipes')
     } catch(error) {
         res.status(500).json(error)
     }
@@ -94,7 +94,9 @@ recipes.delete('/recipe/:id', async(req,res) => {
                 recipe_id: id
             }
         });
-         res.redirect('http://localhost:3000/recipes')
+        res.redirect('https://in-or-out.onrender.com/recipes')
+        //  res.redirect('http://localhost:4005/recipes')   for testing on device (not deployed)
+        
         // res.status(200).json({
         //     message: Successfully deleted restaurant id ${id},})
     } catch(error) {
